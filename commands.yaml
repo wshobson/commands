@@ -1,0 +1,1126 @@
+commands:
+  # Workflows
+  - name: feature-development
+    title: Feature Development
+    type: command
+    category: development
+    description: Backend, frontend, testing, and deployment subagents build complete features
+    content: workflows/feature-development.md
+    aiPlatform: claude-code@2025.06
+    commandName: /feature-development
+    inputParameters:
+      - name: feature_type
+        label: Feature Type
+        description: Type of feature to develop
+        type: select
+        required: false
+        defaultValue: full-stack
+        options: ["full-stack", "backend-only", "frontend-only", "api", "mobile"]
+      - name: tech_stack
+        label: Technology Stack
+        description: Primary technology stack to use
+        type: select
+        required: false
+        options: ["React/Node", "Vue/Python", "Angular/Java", "Next.js/Go", "React Native"]
+    
+  - name: full-review
+    title: Full Review
+    type: command
+    category: development
+    description: Multiple review subagents provide comprehensive code analysis
+    content: workflows/full-review.md
+    aiPlatform: claude-code@2025.06
+    commandName: /full-review
+    inputParameters:
+      - name: review_depth
+        label: Review Depth
+        description: How thorough should the review be
+        type: select
+        required: false
+        defaultValue: comprehensive
+        options: ["quick", "standard", "comprehensive"]
+      - name: focus_areas
+        label: Focus Areas
+        description: Specific areas to emphasize (comma-separated)
+        type: text
+        required: false
+        defaultValue: "security,performance,maintainability"
+    
+  - name: smart-fix
+    title: Smart Fix
+    type: command
+    category: debugging
+    description: Analyzes issues and delegates to appropriate specialist subagents
+    content: workflows/smart-fix.md
+    aiPlatform: claude-code@2025.06
+    commandName: /smart-fix
+    
+  - name: git-workflow
+    title: Git Workflow
+    type: command
+    category: development
+    description: Implements effective Git workflows with branching strategies and PR templates
+    content: workflows/git-workflow.md
+    aiPlatform: claude-code@2025.06
+    commandName: /git-workflow
+    inputParameters:
+      - name: workflow_type
+        label: Workflow Type
+        description: Git workflow strategy to implement
+        type: select
+        required: false
+        defaultValue: gitflow
+        options: ["gitflow", "github-flow", "gitlab-flow", "trunk-based"]
+    mcpRequirements:
+      - serverId: github
+        tier: optional
+        version: ">=1.0.0"
+    
+  - name: improve-agent
+    title: Improve Agent
+    type: command
+    category: development
+    description: Enhances subagent performance through prompt optimization
+    content: workflows/improve-agent.md
+    aiPlatform: claude-code@2025.06
+    commandName: /improve-agent
+    
+  - name: legacy-modernize
+    title: Legacy Modernize
+    type: command
+    category: refactoring
+    description: Modernizes legacy codebases using specialized subagents
+    content: workflows/legacy-modernize.md
+    aiPlatform: claude-code@2025.06
+    commandName: /legacy-modernize
+    inputParameters:
+      - name: modernization_approach
+        label: Modernization Approach
+        description: Strategy for modernizing the legacy system
+        type: select
+        required: false
+        defaultValue: incremental
+        options: ["rewrite", "refactor", "incremental", "strangler-fig", "hybrid"]
+      - name: target_architecture
+        label: Target Architecture
+        description: Desired architecture pattern
+        type: select
+        required: false
+        options: ["microservices", "serverless", "modular-monolith", "event-driven", "domain-driven"]
+    
+  - name: ml-pipeline
+    title: ML Pipeline
+    type: command
+    category: data-analysis
+    description: Creates ML pipelines with data and ML engineering subagents
+    content: workflows/ml-pipeline.md
+    aiPlatform: claude-code@2025.06
+    commandName: /ml-pipeline
+    inputParameters:
+      - name: ml_framework
+        label: ML Framework
+        description: Machine learning framework to use
+        type: select
+        required: false
+        defaultValue: pytorch
+        options: ["pytorch", "tensorflow", "scikit-learn", "huggingface", "jax"]
+      - name: pipeline_type
+        label: Pipeline Type
+        description: Type of ML pipeline to create
+        type: select
+        required: false
+        options: ["training", "inference", "feature-engineering", "end-to-end", "streaming"]
+    
+  - name: multi-platform
+    title: Multi Platform
+    type: command
+    category: development
+    description: Builds cross-platform apps with coordinated subagents
+    content: workflows/multi-platform.md
+    aiPlatform: claude-code@2025.06
+    commandName: /multi-platform
+    inputParameters:
+      - name: platforms
+        label: Target Platforms
+        description: Platforms to target (comma-separated)
+        type: text
+        required: true
+        defaultValue: "web,ios,android"
+      - name: shared_code_strategy
+        label: Code Sharing Strategy
+        description: How to share code between platforms
+        type: select
+        required: false
+        defaultValue: shared-logic
+        options: ["shared-logic", "monorepo", "micro-frontends", "native-per-platform"]
+    
+  - name: workflow-automate
+    title: Workflow Automate
+    type: command
+    category: deployment
+    description: Automates CI/CD, monitoring, and deployment workflows
+    content: workflows/workflow-automate.md
+    aiPlatform: claude-code@2025.06
+    commandName: /workflow-automate
+    inputParameters:
+      - name: ci_platform
+        label: CI/CD Platform
+        description: CI/CD platform to use
+        type: select
+        required: false
+        defaultValue: github-actions
+        options: ["github-actions", "gitlab-ci", "jenkins", "circleci", "azure-devops", "bitbucket-pipelines"]
+    
+  - name: full-stack-feature
+    title: Full Stack Feature
+    type: command
+    category: development
+    description: Multi-platform features with backend, frontend, and mobile subagents
+    content: workflows/full-stack-feature.md
+    aiPlatform: claude-code@2025.06
+    commandName: /full-stack-feature
+    inputParameters:
+      - name: feature_complexity
+        label: Feature Complexity
+        description: Complexity level of the feature
+        type: select
+        required: false
+        defaultValue: medium
+        options: ["simple", "medium", "complex", "enterprise"]
+      - name: api_style
+        label: API Style
+        description: API architecture style
+        type: select
+        required: false
+        defaultValue: rest
+        options: ["rest", "graphql", "grpc", "websocket", "event-driven"]
+    
+  - name: security-hardening
+    title: Security Hardening
+    type: command
+    category: security-audit
+    description: Security-first implementation with specialized subagents
+    content: workflows/security-hardening.md
+    aiPlatform: claude-code@2025.06
+    commandName: /security-hardening
+    inputParameters:
+      - name: security_standard
+        label: Security Standard
+        description: Security standard to follow
+        type: select
+        required: false
+        defaultValue: owasp
+        options: ["owasp", "nist", "iso27001", "pci-dss", "hipaa", "sox"]
+      - name: threat_model
+        label: Threat Model
+        description: Threat modeling approach
+        type: select
+        required: false
+        defaultValue: stride
+        options: ["stride", "pasta", "attack-trees", "kill-chain", "mitre-attack"]
+    
+  - name: data-driven-feature
+    title: Data Driven Feature
+    type: command
+    category: data-analysis
+    description: ML-powered features with data science subagents
+    content: workflows/data-driven-feature.md
+    aiPlatform: claude-code@2025.06
+    commandName: /data-driven-feature
+    inputParameters:
+      - name: data_source
+        label: Data Source Type
+        description: Primary data source type
+        type: select
+        required: false
+        defaultValue: database
+        options: ["database", "streaming", "api", "files", "data-lake", "hybrid"]
+      - name: ml_use_case
+        label: ML Use Case
+        description: Type of ML functionality
+        type: select
+        required: false
+        options: ["recommendation", "classification", "prediction", "nlp", "computer-vision", "anomaly-detection"]
+    
+  - name: performance-optimization
+    title: Performance Optimization
+    type: command
+    category: performance-optimization
+    description: End-to-end optimization with performance subagents
+    content: workflows/performance-optimization.md
+    aiPlatform: claude-code@2025.06
+    commandName: /performance-optimization
+    inputParameters:
+      - name: optimization_target
+        label: Optimization Target
+        description: What to optimize for
+        type: select
+        required: false
+        defaultValue: latency
+        options: ["latency", "throughput", "memory", "cpu", "cost", "all"]
+      - name: performance_goal
+        label: Performance Goal
+        description: Target improvement percentage
+        type: select
+        required: false
+        defaultValue: "25"
+        options: ["10", "25", "50", "75", "90"]
+    
+  - name: incident-response
+    title: Incident Response
+    type: command
+    category: deployment
+    description: Production incident resolution with ops subagents
+    content: workflows/incident-response.md
+    aiPlatform: claude-code@2025.06
+    commandName: /incident-response
+    inputParameters:
+      - name: severity
+        label: Incident Severity
+        description: Severity level of the incident
+        type: select
+        required: true
+        defaultValue: P2
+        options: ["P1-Critical", "P2-High", "P3-Medium", "P4-Low"]
+      - name: affected_service
+        label: Affected Service
+        description: Name of the affected service
+        type: text
+        required: false
+    
+  # Tools
+  - name: ai-assistant
+    title: AI Assistant
+    type: command
+    category: development
+    description: Build production-ready AI assistants and chatbots
+    content: tools/ai-assistant.md
+    aiPlatform: claude-code@2025.06
+    commandName: /ai-assistant
+    inputParameters:
+      - name: ai_provider
+        label: AI Provider
+        description: LLM provider to use
+        type: select
+        required: false
+        defaultValue: openai
+        options: ["openai", "anthropic", "google", "azure", "aws-bedrock", "huggingface"]
+      - name: assistant_type
+        label: Assistant Type
+        description: Type of AI assistant
+        type: select
+        required: false
+        defaultValue: chatbot
+        options: ["chatbot", "code-assistant", "support-agent", "knowledge-base", "task-automation"]
+    
+  - name: ai-review
+    title: AI Review
+    type: command
+    category: development
+    description: Specialized review for AI/ML codebases
+    content: tools/ai-review.md
+    aiPlatform: claude-code@2025.06
+    commandName: /ai-review
+    
+  - name: langchain-agent
+    title: LangChain Agent
+    type: command
+    category: development
+    description: Create LangChain/LangGraph agents with modern patterns
+    content: tools/langchain-agent.md
+    aiPlatform: claude-code@2025.06
+    commandName: /langchain-agent
+    inputParameters:
+      - name: agent_type
+        label: Agent Type
+        description: Type of LangChain agent to create
+        type: select
+        required: false
+        defaultValue: react
+        options: ["react", "conversational", "tool-calling", "plan-execute", "langgraph-custom"]
+      - name: memory_type
+        label: Memory Type
+        description: Memory implementation for the agent
+        type: select
+        required: false
+        defaultValue: conversation-buffer
+        options: ["none", "conversation-buffer", "conversation-summary", "vector-store", "entity"]
+    
+  - name: prompt-optimize
+    title: Prompt Optimize
+    type: command
+    category: performance-optimization
+    description: Optimize AI prompts for performance and quality
+    content: tools/prompt-optimize.md
+    aiPlatform: claude-code@2025.06
+    commandName: /prompt-optimize
+    inputParameters:
+      - name: optimization_goal
+        label: Optimization Goal
+        description: What to optimize the prompts for
+        type: select
+        required: false
+        defaultValue: accuracy
+        options: ["accuracy", "speed", "cost", "consistency", "safety", "balanced"]
+    
+  - name: code-explain
+    title: Code Explain
+    type: command
+    category: documentation
+    description: Generate detailed explanations of complex code
+    content: tools/code-explain.md
+    aiPlatform: claude-code@2025.06
+    commandName: /code-explain
+    inputParameters:
+      - name: explanation_level
+        label: Explanation Level
+        description: Level of detail for explanations
+        type: select
+        required: false
+        defaultValue: intermediate
+        options: ["beginner", "intermediate", "advanced", "expert"]
+    
+  - name: code-migrate
+    title: Code Migrate
+    type: command
+    category: refactoring
+    description: Migrate code between languages, frameworks, or versions
+    content: tools/code-migrate.md
+    aiPlatform: claude-code@2025.06
+    commandName: /code-migrate
+    inputParameters:
+      - name: source_language
+        label: Source Language/Framework
+        description: Current language or framework
+        type: text
+        required: true
+      - name: target_language
+        label: Target Language/Framework
+        description: Target language or framework
+        type: text
+        required: true
+      - name: migration_strategy
+        label: Migration Strategy
+        description: How to approach the migration
+        type: select
+        required: false
+        defaultValue: incremental
+        options: ["all-at-once", "incremental", "parallel-run", "feature-by-feature"]
+    
+  - name: refactor-clean
+    title: Refactor Clean
+    type: command
+    category: refactoring
+    description: Refactor code for maintainability and performance
+    content: tools/refactor-clean.md
+    aiPlatform: claude-code@2025.06
+    commandName: /refactor-clean
+    inputParameters:
+      - name: refactor_focus
+        label: Refactoring Focus
+        description: Primary focus of refactoring
+        type: select
+        required: false
+        defaultValue: maintainability
+        options: ["maintainability", "performance", "testability", "readability", "modularity", "all"]
+    
+  - name: tech-debt
+    title: Tech Debt
+    type: command
+    category: refactoring
+    description: Analyze and prioritize technical debt
+    content: tools/tech-debt.md
+    aiPlatform: claude-code@2025.06
+    commandName: /tech-debt
+    
+  - name: data-pipeline
+    title: Data Pipeline
+    type: command
+    category: data-analysis
+    description: Design scalable data pipeline architectures
+    content: tools/data-pipeline.md
+    aiPlatform: claude-code@2025.06
+    commandName: /data-pipeline
+    inputParameters:
+      - name: pipeline_framework
+        label: Pipeline Framework
+        description: Data pipeline framework to use
+        type: select
+        required: false
+        defaultValue: airflow
+        options: ["airflow", "dagster", "prefect", "spark", "beam", "kafka-streams", "custom"]
+      - name: data_volume
+        label: Data Volume
+        description: Expected data volume
+        type: select
+        required: false
+        defaultValue: medium
+        options: ["small-gb", "medium-tb", "large-pb", "streaming-realtime"]
+    
+  - name: data-validation
+    title: Data Validation
+    type: command
+    category: data-analysis
+    description: Implement comprehensive data validation systems
+    content: tools/data-validation.md
+    aiPlatform: claude-code@2025.06
+    commandName: /data-validation
+    inputParameters:
+      - name: validation_framework
+        label: Validation Framework
+        description: Data validation framework to use
+        type: select
+        required: false
+        defaultValue: great-expectations
+        options: ["great-expectations", "pandera", "pydantic", "cerberus", "jsonschema", "custom"]
+    
+  - name: db-migrate
+    title: Database Migrate
+    type: command
+    category: database-design
+    description: Advanced database migration strategies
+    content: tools/db-migrate.md
+    aiPlatform: claude-code@2025.06
+    commandName: /db-migrate
+    inputParameters:
+      - name: database_type
+        label: Database Type
+        description: Type of database
+        type: select
+        required: false
+        defaultValue: postgresql
+        options: ["postgresql", "mysql", "mongodb", "dynamodb", "cassandra", "redis", "elasticsearch"]
+      - name: migration_tool
+        label: Migration Tool
+        description: Database migration tool to use
+        type: select
+        required: false
+        defaultValue: auto-detect
+        options: ["auto-detect", "flyway", "liquibase", "alembic", "prisma", "knex", "mongoose"]
+      - name: strategy
+        label: Migration Strategy
+        description: Migration approach
+        type: select
+        required: false
+        defaultValue: rolling
+        options: ["rolling", "blue-green", "canary", "big-bang", "parallel-run"]
+    mcpRequirements:
+      - serverId: sqlite
+        tier: optional
+      - serverId: postgres
+        tier: optional
+    
+  - name: deploy-checklist
+    title: Deploy Checklist
+    type: command
+    category: deployment
+    description: Generate deployment configurations and checklists
+    content: tools/deploy-checklist.md
+    aiPlatform: claude-code@2025.06
+    commandName: /deploy-checklist
+    inputParameters:
+      - name: environment
+        label: Deployment Environment
+        description: Target deployment environment
+        type: select
+        required: false
+        defaultValue: production
+        options: ["development", "staging", "production", "disaster-recovery"]
+      - name: deployment_type
+        label: Deployment Type
+        description: Type of deployment
+        type: select
+        required: false
+        defaultValue: rolling
+        options: ["rolling", "blue-green", "canary", "feature-flag", "dark-launch"]
+    
+  - name: docker-optimize
+    title: Docker Optimize
+    type: command
+    category: deployment
+    description: Advanced container optimization strategies
+    content: tools/docker-optimize.md
+    aiPlatform: claude-code@2025.06
+    commandName: /docker-optimize
+    inputParameters:
+      - name: base_image
+        label: Base Image Type
+        description: Type of base image to use
+        type: select
+        required: false
+        defaultValue: alpine
+        options: ["alpine", "distroless", "scratch", "ubuntu", "debian-slim", "custom"]
+      - name: optimization_priority
+        label: Optimization Priority
+        description: What to prioritize in optimization
+        type: select
+        required: false
+        defaultValue: size
+        options: ["size", "security", "build-speed", "startup-time", "balanced"]
+    
+  - name: k8s-manifest
+    title: Kubernetes Manifest
+    type: command
+    category: deployment
+    description: Production-grade Kubernetes deployments
+    content: tools/k8s-manifest.md
+    aiPlatform: claude-code@2025.06
+    commandName: /k8s-manifest
+    inputParameters:
+      - name: workload_type
+        label: Workload Type
+        description: Type of Kubernetes workload
+        type: select
+        required: false
+        defaultValue: deployment
+        options: ["deployment", "statefulset", "daemonset", "job", "cronjob"]
+      - name: ingress_controller
+        label: Ingress Controller
+        description: Ingress controller to use
+        type: select
+        required: false
+        defaultValue: nginx
+        options: ["nginx", "traefik", "istio", "ambassador", "haproxy", "aws-alb"]
+      - name: autoscaling
+        label: Autoscaling Type
+        description: Autoscaling configuration
+        type: select
+        required: false
+        defaultValue: hpa
+        options: ["none", "hpa", "vpa", "hpa+vpa", "keda"]
+    
+  - name: monitor-setup
+    title: Monitor Setup
+    type: command
+    category: deployment
+    description: Set up comprehensive monitoring and observability
+    content: tools/monitor-setup.md
+    aiPlatform: claude-code@2025.06
+    commandName: /monitor-setup
+    inputParameters:
+      - name: monitoring_stack
+        label: Monitoring Stack
+        description: Monitoring stack to implement
+        type: select
+        required: false
+        defaultValue: prometheus-grafana
+        options: ["prometheus-grafana", "elk-stack", "datadog", "new-relic", "aws-cloudwatch", "gcp-stackdriver", "azure-monitor"]
+      - name: alerting_channels
+        label: Alerting Channels
+        description: Where to send alerts (comma-separated)
+        type: text
+        required: false
+        defaultValue: "slack,email"
+    
+  - name: slo-implement
+    title: SLO Implement
+    type: command
+    category: deployment
+    description: Implement Service Level Objectives (SLOs)
+    content: tools/slo-implement.md
+    aiPlatform: claude-code@2025.06
+    commandName: /slo-implement
+    inputParameters:
+      - name: slo_target
+        label: SLO Target
+        description: Target availability percentage
+        type: select
+        required: false
+        defaultValue: "99.9"
+        options: ["99", "99.5", "99.9", "99.95", "99.99"]
+      - name: error_budget_policy
+        label: Error Budget Policy
+        description: How to handle error budget
+        type: select
+        required: false
+        defaultValue: alert
+        options: ["alert", "throttle-deploys", "freeze-features", "custom"]
+    
+  - name: api-mock
+    title: API Mock
+    type: command
+    category: testing
+    description: Create realistic API mocks for development and testing
+    content: tools/api-mock.md
+    aiPlatform: claude-code@2025.06
+    commandName: /api-mock
+    inputParameters:
+      - name: mock_tool
+        label: Mocking Tool
+        description: Tool to use for API mocking
+        type: select
+        required: false
+        defaultValue: auto-detect
+        options: ["auto-detect", "msw", "mirage", "json-server", "wiremock", "mockoon", "postman"]
+      - name: data_generation
+        label: Data Generation
+        description: How to generate mock data
+        type: select
+        required: false
+        defaultValue: faker
+        options: ["faker", "static", "ai-generated", "recorded", "hybrid"]
+    
+  - name: api-scaffold
+    title: API Scaffold
+    type: command
+    category: api-design
+    description: Generate production-ready API endpoints with complete implementation stack
+    content: tools/api-scaffold.md
+    aiPlatform: claude-code@2025.06
+    commandName: /api-scaffold
+    inputParameters:
+      - name: api_type
+        label: API Type
+        description: Type of API to scaffold
+        type: select
+        required: true
+        defaultValue: rest
+        options: ["rest", "graphql", "grpc", "websocket", "event-driven"]
+      - name: auth_method
+        label: Authentication Method
+        description: Authentication method to implement
+        type: select
+        required: false
+        defaultValue: jwt
+        options: ["none", "jwt", "oauth2", "api-key", "basic", "session", "mutual-tls"]
+      - name: database
+        label: Database
+        description: Database to use
+        type: select
+        required: false
+        defaultValue: postgresql
+        options: ["postgresql", "mysql", "mongodb", "dynamodb", "redis", "none"]
+      - name: framework
+        label: Framework
+        description: Backend framework to use
+        type: select
+        required: false
+        defaultValue: auto-detect
+        options: ["auto-detect", "express", "fastapi", "django", "spring-boot", "gin", "rails"]
+    
+  - name: test-harness
+    title: Test Harness
+    type: command
+    category: testing
+    description: Create comprehensive test suites with framework detection
+    content: tools/test-harness.md
+    aiPlatform: claude-code@2025.06
+    commandName: /test-harness
+    inputParameters:
+      - name: test_types
+        label: Test Types
+        description: Types of tests to create (comma-separated)
+        type: text
+        required: false
+        defaultValue: "unit,integration,e2e"
+      - name: coverage_target
+        label: Coverage Target
+        description: Target code coverage percentage
+        type: select
+        required: false
+        defaultValue: "80"
+        options: ["60", "70", "80", "90", "95", "100"]
+      - name: test_framework
+        label: Test Framework
+        description: Testing framework to use
+        type: select
+        required: false
+        defaultValue: auto-detect
+        options: ["auto-detect", "jest", "pytest", "junit", "rspec", "mocha", "vitest"]
+    
+  - name: accessibility-audit
+    title: Accessibility Audit
+    type: command
+    category: testing
+    description: Comprehensive accessibility testing and fixes
+    content: tools/accessibility-audit.md
+    aiPlatform: claude-code@2025.06
+    commandName: /accessibility-audit
+    inputParameters:
+      - name: wcag_level
+        label: WCAG Level
+        description: WCAG compliance level to target
+        type: select
+        required: false
+        defaultValue: AA
+        options: ["A", "AA", "AAA"]
+      - name: audit_tools
+        label: Audit Tools
+        description: Accessibility testing tools to use
+        type: select
+        required: false
+        defaultValue: auto
+        options: ["auto", "axe", "lighthouse", "wave", "pa11y", "all"]
+    mcpRequirements:
+      - serverId: puppeteer
+        tier: optional
+    
+  - name: compliance-check
+    title: Compliance Check
+    type: command
+    category: security-audit
+    description: Ensure regulatory compliance (GDPR, HIPAA, SOC2)
+    content: tools/compliance-check.md
+    aiPlatform: claude-code@2025.06
+    commandName: /compliance-check
+    inputParameters:
+      - name: compliance_standards
+        label: Compliance Standards
+        description: Standards to check against (comma-separated)
+        type: text
+        required: true
+        defaultValue: "GDPR,SOC2"
+      - name: audit_scope
+        label: Audit Scope
+        description: Scope of compliance audit
+        type: select
+        required: false
+        defaultValue: full
+        options: ["full", "data-privacy", "security", "infrastructure", "processes"]
+    
+  - name: security-scan
+    title: Security Scan
+    type: command
+    category: security-audit
+    description: Comprehensive security scanning with automated remediation
+    content: tools/security-scan.md
+    aiPlatform: claude-code@2025.06
+    commandName: /security-scan
+    inputParameters:
+      - name: scan_depth
+        label: Scan Depth
+        description: How thorough the security scan should be
+        type: select
+        required: false
+        defaultValue: standard
+        options: ["quick", "standard", "comprehensive", "paranoid"]
+      - name: security_tools
+        label: Security Tools
+        description: Security scanning tools to use
+        type: text
+        required: false
+        defaultValue: "auto-detect"
+      - name: auto_fix
+        label: Auto Fix
+        description: Automatically fix found vulnerabilities
+        type: select
+        required: false
+        defaultValue: "safe-only"
+        options: ["none", "safe-only", "all-possible", "interactive"]
+    
+  - name: debug-trace
+    title: Debug Trace
+    type: command
+    category: debugging
+    description: Advanced debugging and tracing strategies
+    content: tools/debug-trace.md
+    aiPlatform: claude-code@2025.06
+    commandName: /debug-trace
+    inputParameters:
+      - name: trace_level
+        label: Trace Level
+        description: Level of detail for tracing
+        type: select
+        required: false
+        defaultValue: detailed
+        options: ["minimal", "standard", "detailed", "verbose"]
+    
+  - name: error-analysis
+    title: Error Analysis
+    type: command
+    category: debugging
+    description: Deep error pattern analysis and resolution strategies
+    content: tools/error-analysis.md
+    aiPlatform: claude-code@2025.06
+    commandName: /error-analysis
+    
+  - name: error-trace
+    title: Error Trace
+    type: command
+    category: debugging
+    description: Trace and diagnose production errors
+    content: tools/error-trace.md
+    aiPlatform: claude-code@2025.06
+    commandName: /error-trace
+    inputParameters:
+      - name: environment
+        label: Environment
+        description: Environment where error occurred
+        type: select
+        required: false
+        defaultValue: production
+        options: ["local", "development", "staging", "production"]
+    
+  - name: issue
+    title: Issue Creator
+    type: command
+    category: documentation
+    description: Create well-structured GitHub/GitLab issues
+    content: tools/issue.md
+    aiPlatform: claude-code@2025.06
+    commandName: /issue
+    inputParameters:
+      - name: issue_type
+        label: Issue Type
+        description: Type of issue to create
+        type: select
+        required: false
+        defaultValue: bug
+        options: ["bug", "feature", "enhancement", "documentation", "question", "task"]
+      - name: priority
+        label: Priority
+        description: Issue priority level
+        type: select
+        required: false
+        defaultValue: medium
+        options: ["low", "medium", "high", "critical"]
+    mcpRequirements:
+      - serverId: github
+        tier: optional
+    
+  - name: config-validate
+    title: Config Validate
+    type: command
+    category: deployment
+    description: Validate and manage application configuration
+    content: tools/config-validate.md
+    aiPlatform: claude-code@2025.06
+    commandName: /config-validate
+    inputParameters:
+      - name: config_format
+        label: Config Format
+        description: Configuration file format
+        type: select
+        required: false
+        defaultValue: auto-detect
+        options: ["auto-detect", "yaml", "json", "toml", "env", "ini", "xml"]
+    
+  - name: deps-audit
+    title: Dependencies Audit
+    type: command
+    category: security-audit
+    description: Audit dependencies for security and licensing
+    content: tools/deps-audit.md
+    aiPlatform: claude-code@2025.06
+    commandName: /deps-audit
+    inputParameters:
+      - name: audit_focus
+        label: Audit Focus
+        description: What to focus the audit on
+        type: select
+        required: false
+        defaultValue: both
+        options: ["security", "licenses", "both", "outdated", "all"]
+    
+  - name: deps-upgrade
+    title: Dependencies Upgrade
+    type: command
+    category: development
+    description: Safely upgrade project dependencies
+    content: tools/deps-upgrade.md
+    aiPlatform: claude-code@2025.06
+    commandName: /deps-upgrade
+    inputParameters:
+      - name: upgrade_strategy
+        label: Upgrade Strategy
+        description: How aggressive to be with upgrades
+        type: select
+        required: false
+        defaultValue: minor
+        options: ["patch", "minor", "major", "latest", "security-only"]
+      - name: test_after_upgrade
+        label: Test After Upgrade
+        description: Run tests after upgrading
+        type: select
+        required: false
+        defaultValue: "yes"
+        options: ["yes", "no", "interactive"]
+    
+  - name: doc-generate
+    title: Documentation Generate
+    type: command
+    category: documentation
+    description: Generate comprehensive documentation
+    content: tools/doc-generate.md
+    aiPlatform: claude-code@2025.06
+    commandName: /doc-generate
+    inputParameters:
+      - name: doc_type
+        label: Documentation Type
+        description: Type of documentation to generate
+        type: select
+        required: false
+        defaultValue: api
+        options: ["api", "code", "user", "developer", "architecture", "all"]
+      - name: doc_format
+        label: Documentation Format
+        description: Output format for documentation
+        type: select
+        required: false
+        defaultValue: markdown
+        options: ["markdown", "html", "pdf", "openapi", "asyncapi", "docusaurus"]
+    
+  - name: pr-enhance
+    title: PR Enhance
+    type: command
+    category: development
+    description: Enhance pull requests with quality checks
+    content: tools/pr-enhance.md
+    aiPlatform: claude-code@2025.06
+    commandName: /pr-enhance
+    mcpRequirements:
+      - serverId: github
+        tier: optional
+    
+  - name: cost-optimize
+    title: Cost Optimize
+    type: command
+    category: performance-optimization
+    description: Optimize cloud and infrastructure costs
+    content: tools/cost-optimize.md
+    aiPlatform: claude-code@2025.06
+    commandName: /cost-optimize
+    inputParameters:
+      - name: cloud_provider
+        label: Cloud Provider
+        description: Cloud provider to optimize for
+        type: select
+        required: false
+        defaultValue: aws
+        options: ["aws", "gcp", "azure", "multi-cloud", "on-premise"]
+      - name: optimization_level
+        label: Optimization Level
+        description: How aggressive to be with cost optimization
+        type: select
+        required: false
+        defaultValue: moderate
+        options: ["conservative", "moderate", "aggressive", "maximum"]
+    
+  - name: onboard
+    title: Onboard
+    type: command
+    category: development
+    description: Set up development environments for new team members
+    content: tools/onboard.md
+    aiPlatform: claude-code@2025.06
+    commandName: /onboard
+    inputParameters:
+      - name: developer_level
+        label: Developer Level
+        description: Experience level of the new team member
+        type: select
+        required: false
+        defaultValue: mid
+        options: ["junior", "mid", "senior", "lead"]
+      - name: setup_scope
+        label: Setup Scope
+        description: What to include in the setup
+        type: select
+        required: false
+        defaultValue: full
+        options: ["minimal", "standard", "full", "custom"]
+    
+  - name: multi-agent-review
+    title: Multi Agent Review
+    type: command
+    category: development
+    description: Multi-perspective code review with specialized subagents
+    content: tools/multi-agent-review.md
+    aiPlatform: claude-code@2025.06
+    commandName: /multi-agent-review
+    inputParameters:
+      - name: review_perspectives
+        label: Review Perspectives
+        description: Perspectives to include (comma-separated)
+        type: text
+        required: false
+        defaultValue: "code-quality,security,performance,architecture"
+    
+  - name: smart-debug
+    title: Smart Debug
+    type: command
+    category: debugging
+    description: Deep debugging with debugger and performance subagents
+    content: tools/smart-debug.md
+    aiPlatform: claude-code@2025.06
+    commandName: /smart-debug
+    
+  - name: multi-agent-optimize
+    title: Multi Agent Optimize
+    type: command
+    category: performance-optimization
+    description: Full-stack optimization with multiple subagents
+    content: tools/multi-agent-optimize.md
+    aiPlatform: claude-code@2025.06
+    commandName: /multi-agent-optimize
+    inputParameters:
+      - name: optimization_scope
+        label: Optimization Scope
+        description: Scope of optimization
+        type: select
+        required: false
+        defaultValue: full-stack
+        options: ["frontend", "backend", "database", "infrastructure", "full-stack"]
+    
+  - name: context-save
+    title: Context Save
+    type: command
+    category: development
+    description: Save project context using context-manager subagent
+    content: tools/context-save.md
+    aiPlatform: claude-code@2025.06
+    commandName: /context-save
+    inputParameters:
+      - name: context_name
+        label: Context Name
+        description: Name for the saved context
+        type: text
+        required: false
+        defaultValue: "project-context"
+    
+  - name: context-restore
+    title: Context Restore
+    type: command
+    category: development
+    description: Restore saved context for continuity
+    content: tools/context-restore.md
+    aiPlatform: claude-code@2025.06
+    commandName: /context-restore
+    inputParameters:
+      - name: context_name
+        label: Context Name
+        description: Name of context to restore
+        type: text
+        required: false
+        defaultValue: "project-context"
+    
+  - name: standup-notes
+    title: Standup Notes
+    type: command
+    category: documentation
+    description: Generate standup notes from recent activity
+    content: tools/standup-notes.md
+    aiPlatform: claude-code@2025.06
+    commandName: /standup-notes
+    inputParameters:
+      - name: timeframe
+        label: Timeframe
+        description: Period to cover in standup notes
+        type: select
+        required: false
+        defaultValue: yesterday
+        options: ["yesterday", "last-2-days", "last-week", "custom"]
+    mcpRequirements:
+      - serverId: github
+        tier: optional
+
+repository:
+  license: MIT
+  description: Production-ready slash commands for Claude Code that accelerate development through intelligent automation
+
+metadata:
+  created: "2025-01-12"
+  updated: "2025-01-12"
+  total_commands: 53
+  supported_platforms:
+    - claude-code@2025.06
