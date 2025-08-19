@@ -1,3 +1,21 @@
+---
+name: Data-Driven Feature Development
+description: Build data-driven features with integrated pipelines and ML capabilities using specialized agents
+allowed_tools:
+  - memory          # For storing analysis and outputs from each agent
+  - sqlite          # For data analysis and pipeline requirements
+  - filesystem      # For implementing pipelines and ML code
+tags:
+  - data-science
+  - machine-learning
+  - pipeline
+  - analytics
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Build data-driven features with integrated pipelines and ML capabilities using specialized agents:
 
 [Extended thinking: This workflow orchestrates data scientists, data engineers, backend architects, and AI engineers to build features that leverage data pipelines, analytics, and machine learning. Each agent contributes their expertise to create a complete data-driven solution.]

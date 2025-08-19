@@ -1,3 +1,21 @@
+---
+name: AI/ML Code Review
+description: Specialized code review tool for AI/ML projects, focusing on model quality, data handling, LLM implementation, and production readiness. Analyzes reproducibility, prompt injection prevention, privacy compliance, and performance optimization.
+allowed_tools:
+  - filesystem      # Code file analysis
+  - memory          # Track review patterns
+  - sqlite          # Store review metrics
+tags:
+  - ai-ml
+  - code-review
+  - model-validation
+  - data-science
+  - llm-optimization
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 # AI/ML Code Review
 
 Perform a specialized AI/ML code review for: $ARGUMENTS

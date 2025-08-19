@@ -1,3 +1,19 @@
+---
+name: Agent Improvement Workflow
+description: Improve an existing agent based on recent performance analysis and user feedback
+allowed_tools:
+  - memory          # For analyzing agent performance patterns and storing improvements
+  - filesystem      # For updating agent configurations and prompts
+tags:
+  - agent-improvement
+  - performance-analysis
+  - optimization
+  - workflow
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 Improve an existing agent based on recent performance:
 
 1. Analyze recent uses of: $ARGUMENTS

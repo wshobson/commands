@@ -1,3 +1,22 @@
+---
+name: Smart Issue Resolution
+description: Intelligently fix issues using automatic agent selection with explicit Task tool invocations
+allowed_tools:
+  - memory          # For storing issue analysis and coordination between specialized agents
+  - filesystem      # For implementing fixes across different domains (code, infrastructure, database)
+tags:
+  - issue-resolution
+  - debugging
+  - troubleshooting
+  - performance
+  - infrastructure
+  - automation
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Intelligently fix the issue using automatic agent selection with explicit Task tool invocations:
 
 [Extended thinking: This workflow analyzes the issue and automatically routes to the most appropriate specialist agent(s). Complex issues may require multiple agents working together.]

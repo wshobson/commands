@@ -1,3 +1,21 @@
+---
+name: Feature Development Workflow
+description: Implement a new feature using specialized agents with explicit Task tool invocations
+allowed_tools:
+  - memory          # For storing API designs and component specifications
+  - filesystem      # For implementing frontend, backend, and test code
+tags:
+  - feature-development
+  - backend
+  - frontend
+  - testing
+  - deployment
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Implement a new feature using specialized agents with explicit Task tool invocations:
 
 [Extended thinking: This workflow orchestrates multiple specialized agents to implement a complete feature from design to deployment. Each agent receives context from previous agents to ensure coherent implementation.]

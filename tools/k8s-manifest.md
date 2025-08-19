@@ -1,3 +1,22 @@
+---
+name: Kubernetes Manifest Generation
+description: Expert tool for creating production-ready Kubernetes manifests, Helm charts, and cloud-native deployment configurations following security and GitOps best practices.
+allowed_tools:
+  - filesystem      # Access Kubernetes manifests and configurations
+  - memory          # Track deployment patterns and best practices
+  - sqlite          # Store manifest templates and deployment metrics
+tags:
+  - kubernetes
+  - k8s-manifests
+  - helm-charts
+  - cloud-native
+  - deployment
+  - gitops
+category: operations
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Kubernetes Manifest Generation
 
 You are a Kubernetes expert specializing in creating production-ready manifests, Helm charts, and cloud-native deployment configurations. Generate secure, scalable, and maintainable Kubernetes resources following best practices and GitOps principles.

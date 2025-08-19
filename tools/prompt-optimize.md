@@ -1,3 +1,21 @@
+---
+name: AI Prompt Optimization
+description: Optimize prompts for better AI model performance using chain-of-thought reasoning, few-shot examples, and advanced prompt engineering techniques.
+allowed_tools:
+  - filesystem      # Access prompt templates and examples
+  - memory          # Track optimization patterns and performance metrics
+  - sqlite          # Store prompt variations and effectiveness data
+tags:
+  - prompt-engineering
+  - ai-optimization
+  - chain-of-thought
+  - few-shot-learning
+  - performance-tuning
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 # AI Prompt Optimization
 
 Optimize the following prompt for better AI model performance: $ARGUMENTS

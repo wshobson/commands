@@ -1,3 +1,21 @@
+---
+name: Smart Debug
+description: Debug complex issues using specialized debugging agents with deep analysis capabilities, root cause identification, and performance issue support.
+allowed_tools:
+  - filesystem      # Access code files and debug logs
+  - memory          # Track debugging patterns and solutions
+  - sqlite          # Store debug sessions and issue resolutions
+tags:
+  - debugging
+  - root-cause-analysis
+  - performance-debugging
+  - multi-agent
+  - troubleshooting
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Debug complex issues using specialized debugging agents:
 
 [Extended thinking: This tool command leverages the debugger agent with additional support from performance-engineer when performance issues are involved. It provides deep debugging capabilities with root cause analysis.]

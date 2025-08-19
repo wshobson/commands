@@ -1,3 +1,22 @@
+---
+name: Security Hardening
+description: Implement security-first architecture and hardening measures with coordinated agent orchestration
+allowed_tools:
+  - memory          # For tracking security findings and coordination between agents
+  - filesystem      # For implementing security measures, compliance checks, and monitoring
+tags:
+  - security
+  - hardening
+  - compliance
+  - vulnerability-assessment
+  - penetration-testing
+  - monitoring
+  - workflow
+category: security
+version: 2.0.0
+author: AI Commands Team
+---
+
 Implement security-first architecture and hardening measures with coordinated agent orchestration:
 
 [Extended thinking: This workflow prioritizes security at every layer of the application stack. Multiple agents work together to identify vulnerabilities, implement secure patterns, and ensure compliance with security best practices.]

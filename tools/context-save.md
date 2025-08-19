@@ -1,3 +1,19 @@
+---
+name: Context Save
+description: Save current project context for future agent coordination, capturing and preserving project state, decisions, and patterns for improved continuity.
+allowed_tools:
+  - memory          # Store and persist context data
+  - filesystem      # Save context files and project artifacts
+tags:
+  - context-management
+  - agent-coordination
+  - session-continuity
+  - project-state
+category: operations
+version: 2.0.0
+author: AI Commands Team
+---
+
 Save current project context for future agent coordination:
 
 [Extended thinking: This tool uses the context-manager agent to capture and preserve project state, decisions, and patterns. This enables better continuity across sessions and improved agent coordination.]

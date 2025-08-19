@@ -1,3 +1,24 @@
+---
+name: Performance Optimization
+description: Optimize application performance end-to-end using specialized performance and optimization agents
+allowed_tools:
+  - memory          # For storing performance metrics and optimization strategies
+  - filesystem      # For implementing optimizations across frontend, backend, and infrastructure
+tags:
+  - performance
+  - optimization
+  - backend
+  - frontend
+  - database
+  - infrastructure
+  - monitoring
+  - testing
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Optimize application performance end-to-end using specialized performance and optimization agents:
 
 [Extended thinking: This workflow coordinates multiple agents to identify and fix performance bottlenecks across the entire stack. From database queries to frontend rendering, each agent contributes their expertise to create a highly optimized application.]

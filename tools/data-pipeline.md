@@ -1,3 +1,21 @@
+---
+name: Data Pipeline Architecture
+description: Design and implement scalable data pipelines with ingestion, transformation, and processing capabilities for various data sources and destinations.
+allowed_tools:
+  - filesystem      # Access data files and pipeline configurations
+  - memory          # Track data flow patterns and pipeline metrics
+  - sqlite          # Store pipeline metadata and monitoring data
+tags:
+  - data-pipeline
+  - data-processing
+  - etl
+  - streaming
+  - batch-processing
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Data Pipeline Architecture
 
 Design and implement a scalable data pipeline for: $ARGUMENTS

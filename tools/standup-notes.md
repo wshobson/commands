@@ -1,3 +1,21 @@
+---
+name: Standup Notes Generator
+description: Generate daily standup notes by reviewing project context, Obsidian vault information, and Jira tickets for efficient team communication.
+allowed_tools:
+  - filesystem      # Access project files and documentation
+  - memory          # Track progress and project updates
+  - sqlite          # Store standup history and project metrics
+tags:
+  - standup
+  - team-communication
+  - progress-tracking
+  - jira-integration
+  - documentation
+category: operations
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Standup Notes Generator
 
 Generate daily standup notes by reviewing Obsidian vault context and Jira tickets.

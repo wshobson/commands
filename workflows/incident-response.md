@@ -1,3 +1,23 @@
+---
+name: Production Incident Response
+description: Respond to production incidents with coordinated agent expertise for rapid resolution
+allowed_tools:
+  - memory          # For tracking incident details and coordination between agents
+  - filesystem      # For analyzing logs, implementing fixes, and creating documentation
+tags:
+  - incident-response
+  - production
+  - emergency
+  - debugging
+  - security
+  - monitoring
+  - postmortem
+  - workflow
+category: operations
+version: 2.0.0
+author: AI Commands Team
+---
+
 Respond to production incidents with coordinated agent expertise for rapid resolution:
 
 [Extended thinking: This workflow handles production incidents with urgency and precision. Multiple specialized agents work together to identify root causes, implement fixes, and prevent recurrence.]

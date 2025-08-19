@@ -1,3 +1,25 @@
+---
+name: Full-Stack Feature Implementation
+description: Implement a full-stack feature across multiple platforms with coordinated agent orchestration
+allowed_tools:
+  - memory          # For storing architecture designs and API specifications
+  - filesystem      # For implementing backend, frontend, mobile, and test code
+tags:
+  - full-stack
+  - backend
+  - frontend
+  - mobile
+  - api
+  - graphql
+  - testing
+  - security
+  - performance
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Implement a full-stack feature across multiple platforms with coordinated agent orchestration:
 
 [Extended thinking: This workflow orchestrates a comprehensive feature implementation across backend, frontend, mobile, and API layers. Each agent builds upon the work of previous agents to create a cohesive multi-platform solution.]

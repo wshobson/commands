@@ -1,3 +1,21 @@
+---
+name: Deployment Checklist and Configuration
+description: Generate comprehensive deployment configurations and checklists with pre-deployment validation, security checks, and rollback procedures.
+allowed_tools:
+  - filesystem      # Access deployment scripts and configurations
+  - memory          # Track deployment patterns and best practices
+  - sqlite          # Store deployment metrics and checklist results
+tags:
+  - deployment
+  - checklist
+  - configuration
+  - devops
+  - automation
+category: operations
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Deployment Checklist and Configuration
 
 Generate deployment configuration and checklist for: $ARGUMENTS

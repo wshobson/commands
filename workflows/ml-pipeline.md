@@ -1,3 +1,23 @@
+---
+name: Machine Learning Pipeline
+description: Design and implement a complete ML pipeline with data ingestion, feature engineering, model training, and deployment
+allowed_tools:
+  - memory          # For storing ML experiment results and model configurations  
+  - filesystem      # For implementing pipeline code, model artifacts, and data processing
+  - sqlite          # For data analysis and feature store operations
+tags:
+  - machine-learning
+  - data-pipeline
+  - mlops
+  - model-training
+  - deployment
+  - monitoring
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 # Machine Learning Pipeline
 
 Design and implement a complete ML pipeline for: $ARGUMENTS

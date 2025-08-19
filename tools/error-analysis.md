@@ -1,3 +1,21 @@
+---
+name: Error Analysis and Resolution
+description: Comprehensive error analysis tool that categorizes error types, identifies root causes, and provides resolution strategies with pattern analysis.
+allowed_tools:
+  - filesystem      # Analyze logs and error traces
+  - memory          # Track error patterns and resolution history
+  - sqlite          # Store error analysis and resolution data
+tags:
+  - error-analysis
+  - debugging
+  - root-cause-analysis
+  - troubleshooting
+  - resolution
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Error Analysis and Resolution
 
 Analyze and resolve errors in: $ARGUMENTS

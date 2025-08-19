@@ -1,3 +1,21 @@
+---
+name: GitHub Issue Analysis and Fix
+description: Comprehensive tool for analyzing and fixing GitHub issues with systematic investigation, problem understanding, and solution implementation.
+allowed_tools:
+  - filesystem      # Access code files and project structure
+  - memory          # Track issue patterns and resolution strategies
+  - sqlite          # Store issue analysis and fix history
+tags:
+  - github-issues
+  - bug-fixing
+  - issue-analysis
+  - problem-solving
+  - development
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 Please analyze and fix the GitHub issue: $ARGUMENTS.
 
 Follow these steps:

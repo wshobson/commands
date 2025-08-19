@@ -1,3 +1,21 @@
+---
+name: Data Validation Pipeline
+description: Create comprehensive data validation systems with schema validation, quality checks, and automated monitoring for data integrity.
+allowed_tools:
+  - filesystem      # Access data files and validation schemas
+  - memory          # Track validation patterns and data quality metrics
+  - sqlite          # Store validation results and quality reports
+tags:
+  - data-validation
+  - data-quality
+  - schema-validation
+  - data-integrity
+  - monitoring
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Data Validation Pipeline
 
 Create a comprehensive data validation system for: $ARGUMENTS

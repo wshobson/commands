@@ -1,3 +1,20 @@
+---
+name: Onboard
+description: Systematic onboarding tool that helps AI agents understand project context, codebase structure, and task requirements for effective task execution.
+allowed_tools:
+  - filesystem      # Explore project structure and documentation
+  - memory          # Store onboarding insights and project context
+  - sqlite          # Track onboarding patterns and knowledge
+tags:
+  - onboarding
+  - context-understanding
+  - project-analysis
+  - knowledge-acquisition
+category: operations
+version: 1.0.0
+author: AI Commands Team
+---
+
 # Onboard
 
 You are given the following context:

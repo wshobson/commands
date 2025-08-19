@@ -1,3 +1,21 @@
+---
+name: Multi-Agent Code Review
+description: Comprehensive code review using specialized reviewer agents for code quality, security, and architecture analysis with consolidated findings.
+allowed_tools:
+  - filesystem      # Access code files for review
+  - memory          # Track review patterns and feedback history
+  - sqlite          # Store review results and quality metrics
+tags:
+  - multi-agent
+  - code-review
+  - quality-assurance
+  - security-review
+  - architecture-review
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Perform comprehensive multi-agent code review with specialized reviewers:
 
 [Extended thinking: This tool command invokes multiple review-focused agents to provide different perspectives on code quality, security, and architecture. Each agent reviews independently, then findings are consolidated.]

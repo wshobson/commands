@@ -1,3 +1,19 @@
+---
+name: Context Restore
+description: Restore saved project context for agent coordination, enabling continuity across sessions and providing agents with comprehensive project knowledge.
+allowed_tools:
+  - memory          # Restore and access saved context data
+  - filesystem      # Access context files and project artifacts
+tags:
+  - context-management
+  - agent-coordination
+  - session-continuity
+  - project-state
+category: operations
+version: 2.0.0
+author: AI Commands Team
+---
+
 Restore saved project context for agent coordination:
 
 [Extended thinking: This tool uses the context-manager agent to restore previously saved project context, enabling continuity across sessions and providing agents with comprehensive project knowledge.]

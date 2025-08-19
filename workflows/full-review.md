@@ -1,3 +1,21 @@
+---
+name: Comprehensive Code Review
+description: Perform a comprehensive review using multiple specialized agents with explicit Task tool invocations
+allowed_tools:
+  - memory          # For storing review findings from each specialized agent
+  - filesystem      # For analyzing code, architecture, and test files
+tags:
+  - code-review
+  - security
+  - architecture
+  - performance
+  - testing
+  - workflow
+category: development
+version: 2.0.0
+author: AI Commands Team
+---
+
 Perform a comprehensive review using multiple specialized agents with explicit Task tool invocations:
 
 [Extended thinking: This workflow performs a thorough multi-perspective review by orchestrating specialized review agents. Each agent examines different aspects and the results are consolidated into a unified action plan.]

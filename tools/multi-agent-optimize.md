@@ -1,3 +1,21 @@
+---
+name: Multi-Agent Application Optimization
+description: Coordinate specialized optimization agents (database, performance, frontend) to improve application performance holistically with domain-specific expertise.
+allowed_tools:
+  - memory          # Track optimization patterns and agent coordination
+  - filesystem      # Access application code and configurations
+  - sqlite          # Store optimization metrics and results
+tags:
+  - multi-agent
+  - performance-optimization
+  - database-optimization
+  - frontend-optimization
+  - coordination
+category: operations
+version: 2.0.0
+author: AI Commands Team
+---
+
 Optimize application stack using specialized optimization agents:
 
 [Extended thinking: This tool coordinates database, performance, and frontend optimization agents to improve application performance holistically. Each agent focuses on their domain while ensuring optimizations work together.]

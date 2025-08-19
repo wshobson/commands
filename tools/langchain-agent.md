@@ -1,3 +1,21 @@
+---
+name: LangChain/LangGraph Agent Scaffold
+description: Create production-ready LangChain/LangGraph agents with state machines, tool integration, memory management, and advanced reasoning capabilities.
+allowed_tools:
+  - filesystem      # Access agent code and configuration files
+  - memory          # Track agent patterns and conversation history
+  - sqlite          # Store agent metadata and interaction logs
+tags:
+  - langchain
+  - langgraph
+  - ai-agent
+  - state-machine
+  - tool-integration
+category: development
+version: 1.0.0
+author: AI Commands Team
+---
+
 # LangChain/LangGraph Agent Scaffold
 
 Create a production-ready LangChain/LangGraph agent for: $ARGUMENTS
